@@ -21,7 +21,7 @@ class InstrutionDataset(Dataset):
                 self.dataset.append(
                     {"input": 'instruction: ' + prefix + sample["instruction"] + '\n' + 'input: ' + sample[
                         "input"] + '\n' + "answer: ",
-                     "answer": sample["answer"]})
+                     "answer": sample["output"]})
 
     def __len__(self):
         return len(self.dataset)
