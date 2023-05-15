@@ -1,10 +1,3 @@
-'''
-Author: lihaitao
-Date: 2023-05-08 17:12:01
-LastEditors: Do not edit
-LastEditTime: 2023-05-09 14:10:26
-FilePath: /lht/ChatGLM_LoRA/data.py
-'''
 import random
 import json
 import torch
