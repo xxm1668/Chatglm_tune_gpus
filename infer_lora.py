@@ -11,7 +11,7 @@ model = model.eval()
 model = PeftModel.from_pretrained(model, './output_lora', torch_dtype=torch.float32)
 model.half().cuda()
 
-input_text = '中华人民共和国刑法第七条'
+input_text = '一个患者的卵巢小细胞癌转移至其它部位，是否有必要进行手术治疗？'
 input_text = tokenizer.tokenize(input_text)
 input_text = input_text + ["[gMASK]", "<sop>"]
 ids = tokenizer.convert_tokens_to_ids(input_text)
