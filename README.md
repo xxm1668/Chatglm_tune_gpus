@@ -6,7 +6,7 @@
  * @FilePath: /lht/ChatGLM_LoRA/README.md
 -->
 
-# ChatGLM_multi_gpu_zero_Tuning
+# Chatglm_tune_gpus
 
 实现mult_gpu + zero 微调ChatGLM, 目前已实现LoRA, Ptuning-v2, Freeze三种微调方式。
 
