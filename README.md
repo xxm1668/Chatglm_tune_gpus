@@ -125,19 +125,6 @@ LoRA的参数如下,可根据实际情况调整:
             param.requires_grad = False
 ```
 
-## Requirements
-
-```
-python=3.9
-transformers==4.28.1
-tqdm==4.64.1
-datasets==2.8.0
-torch==2.0.0
-pytorch==1.12.1
-deepspeed==0.9.1
-peft==0.2.0 
-```
-
 ## Todo
 
 - [ ] 增加模型并行和多卡inference
