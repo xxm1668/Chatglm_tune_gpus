@@ -1,15 +1,13 @@
 import os
-from peft import PeftModel
 import torch
-from transformers import AutoTokenizer, AutoModel
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '4'
+from transformers import AutoTokenizer, AutoModel
 
-model = AutoModel.from_pretrained("./chatGLM-6B", trust_remote_code=True)
-tokenizer = AutoTokenizer.from_pretrained("./chatGLM-6B", trust_remote_code=True)
+model = AutoModel.from_pretrained("./output_pt", trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained("./output_pt", trust_remote_code=True)
+
 model = model.eval()
-model = PeftModel.from_pretrained(model, './output_lora', torch_dtype=torch.float32)
-model.half().cuda()
 
 input_text = '中华人民共和国刑法第七条'
 input_text = tokenizer.tokenize(input_text)
